@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchCode Feedback Form</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <form action="/submit" method="POST">
+        <fieldset>
+            <legend>FeedBack</legend>
+            <label for="full-Name">Full Name</label>
+            <input type="text" id="full-Name" name="name" maxlength="50" placeholder="Enter your full name" required />
+            <br>
+            <br>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required
+                pattern="[a-z0-9._%+-]+@[a-z-0.-]+\.[a-z]{2,}$" />
+            <br>
+            <br>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" minlength="8"
+                required />
+            <br>
+            <br>
+
+            <label for="feedbackCategory">Feedback Category</label>
+            <select id="feedbackCategory" name="feedback" required>
+                <option value="">Please select the category... </option>
+                <option value="curriculumBugs" selected>Curriculum Bugs</option>
+                <option value="generalFeedback">General Feedback</option>
+                <option value="performance">Performance</option>
+            </select>
+            <br>
+            <br>
+            <fieldset>
+                <legend>Preferred Contact</legend>
+                <label for="email">E-mail</label>
+                <input type="radio" id="email" name="contact" value="email" />
+                <label for="phone">Phone</label>
+                <input type="radio"  id="phone"  name="contact" value="phone" />
+            </fieldset>
+            <br>
+            <br>
+
+            <fieldset>
+                <legend>Additional Features of Interest</legend>
+                <label for="c++">
+                    <input type="checkbox" id="c++" name="features" value="C++" checked>
+                    C++
+                </label>
+                <label for="sql">
+                    <input type="checkbox" id="sql" name="features" value="sql">
+                    SQL
+                </label>
+                <label for="python">
+                    <input type="checkbox" id="pyhton" name="features" value="python">
+                    Python
+                </label>
+            </fieldset>
+            <br>
+            <br>
+
+            <label for="comments">Comments</label>
+            <textarea id="comments" rows="5" cols="50" name="comments" placeholder="Enter your commments here"
+                maxlength="250"></textarea>
+            <br>
+
+            <button type="submit" id="save-button"> Submit </button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
